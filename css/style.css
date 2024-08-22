@@ -19,19 +19,21 @@ header{
     background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
-    height: 180px;
+    height: 100%;
 
     font-family: "Comic Neue", cursive;
-    font-size: 32px;
+    font-size: 2rem;
     h1{
+        position: top left;
         text-shadow: 5px 5px 15px lightgreen;
+        margin: 0px;
     }
 }
 
 nav{
-    background-color: #68f4db;
     padding: 2px;
     ul{
+        padding-top: 1.875rem;
         margin: 0px 2px;
 
     }
@@ -48,6 +50,7 @@ nav{
 .nav {
     text-align: right;
     display: inline;
+    align-content: last baseline;
 }
 
 .scroll-sticky {
@@ -101,14 +104,14 @@ div.intermedia-vert{
 div.container-md {
     width: 50%; 
     p {
-        font-size: 16px;
+        font-size: 1rem;
         font-family: "Roboto", sans-serif;
-        margin: 20px;
+        margin: 1.25rem;
     }
     h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
         font-family: "Comic Neue", cursive;
-        margin: 20px;
+        margin: 1.25rem;
     }   
     img {
         width: 95%;
@@ -156,15 +159,14 @@ div.container-ind{
 
 div.alerta{
     width: 100%;
-    height: 40px;
-    justify-content: center;
+    height: 2.5rem;
     background-color: red;
     font-size: 30px;
     text-align: center;
-    margin-bottom: 100px;
-        p{
+   p{
         color: white;
-        vertical-align: middle;
+        align-content: center;
+        justify-content: center;
     }
 }
 
@@ -187,7 +189,7 @@ div.alerta{
 .container-grid{
 display: grid;
 grid-template-columns: repeat(3, 1fr);
-grid-template-rows: 300px, 300px, 300px;
+grid-template-rows:auto;
 grid-gap: 20px;
 margin-top: 30px;
 background-color: #9FCB8A;
@@ -200,10 +202,14 @@ background-color: #9FCB8A;
 }
 .grid-item img{
     width: 95%;
-    height: 200px;
+    height:auto;
     padding: 8px
     }
 
+.grid-item p{
+width: 95%;
+height: 15%;
+}
 
 article{
     display: inline-block;
@@ -318,3 +324,161 @@ div.follow-rs{
     border-radius: 50% !important;
 }
 
+@media (max-width: 1024px){
+    .nav li{
+        font-size: 20px;
+    }
+    div.container-md p{
+        font-size: 0.825rem;
+        margin: 1rem;
+    }
+    div.container-md h2{
+        font-size: 1.25rem;
+        margin: 1rem;
+    }
+    .alerta p{
+        font-size: 24px;
+    }
+    .follow-rs a img{
+        width: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    .encabezado{
+        font-size: 1rem;
+    }
+    .nav li{
+        font-size: 0.65rem;
+    }
+    div.container-md p{
+        font-size: 0.625rem;
+        margin: 1rem;
+    }
+    div.container-md h2{
+        font-size: 1.125rem;
+        margin: 1rem;
+    }   
+    .alerta p{
+        font-size: 1rem;
+        align-content: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .container-xl h2{
+        font-size: 0.9rem;
+    }
+    .container-xl p{
+        font-size: 0.75rem;
+    }
+    .container-grid{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows:auto;
+        grid-gap: 15px;
+        margin-top: 15px;
+        }
+        
+        .grid-item{
+            font-size: 1.25rem;
+        }
+        .grid-item img{
+            width: 95%;
+            height:auto;
+            padding: 8px
+        }
+}
+
+@media (max-width: 650px){
+    .follow-rs a img{
+        width: 1.875rem;
+    }
+    div.container-md p{
+        font-size: 0.5rem;
+        margin: 0.65rem;
+    }
+    div.container-md h2{
+        font-size: 0.75rem;
+        margin: 0.5rem;
+    }
+    div.contact-rw{
+        height: 25px;
+        .icon img{
+            width: 18px;
+    } 
+    }
+    div.dato p{
+        font-size: 12px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    div.dato h3{
+        font-size: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    }
+
+@media (max-width:425px){
+    .encabezado{
+        font-size: 0.6rem;
+    }
+    .nav li{
+        font-size: 0.4rem;
+    }
+    .principal{
+        width: 100%;
+        display:block;
+    }   
+    section.columna{
+    display: block;
+    width: 100%;
+    justify-content: space-between ;
+    }
+    div.container-md {
+        width: 100%;
+    }
+    div.container-md p{
+        font-size: 0.5rem;
+        margin: 0.65rem;
+    }
+    div.container-md h2{
+        font-size: 0.75rem;
+        margin: 0.5rem;
+    }
+    .container-grid{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows:auto;
+        grid-gap: 15px;
+        margin-top: 15px;
+        }
+        .grid-item{
+            font-size: 0.75rem;
+        }
+        .grid-item img{
+            padding: 4px
+        }
+    .follow-rs a img{
+        width: 1.2rem;
+    }
+    div.contact-rw{
+        height: 20px;
+        .icon img{
+            width: 13px;
+    } 
+    }
+    div.dato p{
+        font-size: 8px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+    div.dato h3{
+        font-size: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    div.follow-h3{
+        font-size: 10px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}
